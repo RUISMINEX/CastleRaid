@@ -45,8 +45,8 @@ class Main extends PluginBase implements Listener{
 		$this->getServer()->loadLevel("PVP");
 		$yml = new Config($this->getDataFolder() . "config.yml", Config::YAML);
 		$this->yml = $yml->getAll();
-		$this->getLogger()->info("Starting KingdomCraft Core");
-		$this->getLogger()->info("Done!");
+		$this->getLogger()->info("Starting KingdomCraft Core"); //not needed
+		$this->getLogger()->info("Done!"); //not needed aswell
 		$this->saveResource("config.yml");
 		//Dev Mode will have more added later
 		if($this->getConfig()->get("Dev_Mode") == "true"){
@@ -69,9 +69,9 @@ class Main extends PluginBase implements Listener{
 	}
 
 	public function onDisable(){
-		$this->getLogger()->info("Shutting down KingdomCraft Core");
+		$this->getLogger()->info("Shutting down KingdomCraft Core"); //not needed
 		$this->saveConfig();
-		$this->getLogger()->info("Done!");
+		$this->getLogger()->info("Done!"); //not needed
 	}
 
 	public function onRespawn(PlayerRespawnEvent $event){
